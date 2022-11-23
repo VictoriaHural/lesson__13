@@ -1,0 +1,87 @@
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+	max-width: 1920px;
+	background-image: linear-gradient(0deg, rgba(195,188,34,1) 0%, rgba(45,101,253,1) 71%);
+}
+
+[class*="__container"]{
+	max-width: 810px;
+	margin: 0 auto;
+}
+.bird {
+	padding: 20px;
+}
+.bird__item {
+	min-height: 400px;
+	margin-bottom: 20px;
+	background: url('../img/bird.jpg');
+	transition: background 0.5s ease 3.5s;
+}
+.image img{
+	max-width: 100%;
+}
+.image{
+opacity: 0;
+transition: opacity 3s;
+}
+.bird__item:hover .image{
+	opacity: 1;
+	transition-delay: 1s;
+}
+.bird__item:hover{
+	background: darkgoldenrod;
+}
+.ukraine__text{
+	min-height: 480px;
+	background: url('../img/01.jpg') 0 0 / 100% 100% no-repeat;
+}
+h1,h2{
+	padding-top: 15px;
+	font-size: 33px;
+	color: rgb(0, 0, 255);
+	text-shadow: 2px 2px 5px rgb(255, 255, 0);
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 5px;
+}
+h1,h2:not(:last-child){
+	margin-bottom: 20px;
+}
+p{
+	font-size: 28px;
+	color: rgb(7, 7, 90);
+	text-transform: uppercase;
+	text-align: center;
+}
+.title{
+	animation: title 5s ease infinite;
+}
+@keyframes title{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(2);
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+.sub-title{
+	animation: sub-title 2s ease 1s forwards;
+}
+.text{
+	animation: sub-title 2s ease 1.5s forwards;
+}
+@keyframes sub-title{
+	0%{
+		transform: translate(0px, 50%);
+		opacity: 0;
+	}
+	100%{
+		transform: translate(0px, 0%);
+		opasity: 1;
+	}
+}
