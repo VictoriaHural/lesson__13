@@ -9,13 +9,14 @@
 [class*="__container"]{
 	max-width: 810px;
 	margin: 0 auto;
+	margin-bottom: 20px;
 }
 .bird {
 	padding: 20px;
 }
 .bird__item {
 	min-height: 400px;
-	margin-bottom: 20px;
+	
 	background: url('../img/bird.jpg');
 	transition: background 0.5s ease 3.5s;
 }
@@ -82,6 +83,145 @@ p{
 	}
 	100%{
 		transform: translate(0px, 0%);
-		opasity: 1;
+		opacity: 1;
+	}
+}
+.freedom__container {
+	min-height: 400px;
+	background-color: rgb(55, 55, 255);
+	position: relative;
+	border-bottom: 15px dashed rgb(5, 56, 5);
+}
+.freedom__item {
+	position: absolute;
+	left: 285px;
+	top: 270px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: rgb(17, 17, 221);
+	outline: 13px dotted rgb(250, 250, 8);
+	animation: flower 5s ease infinite;
+}
+.freedom__container::before{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 60px;
+	background-color: rgb(24, 110, 24);
+	left: 315px;
+	top: 340px;
+}
+.freedom__container::after{
+	content: '';
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: rgb(193, 224, 12);
+	left: 670px;
+	top: 40px;
+	box-shadow: -5px 5px 25px rgba(230, 230, 84, 0.808);
+	animation: sun 5s linear infinite;
+}
+@keyframes sun{
+	0%{
+		transform: scale(1);
+}
+	50%{
+		transform: scale(1.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+	}
+@keyframes flower{
+	0%{
+		transform: rotate(-360deg);
+}
+	}
+.freedom__sky{
+	position: absolute;
+	width: 150px;
+	height: 75px;
+	background-color: rgb(28, 28, 240);
+	border-radius: 200px 110px 200px 87px;
+	left: 250px;
+	top: 30px;
+	animation: sky 3s ease infinite;
+}
+.freedom__sky::before{
+	content: '';
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgb(28, 28, 240);
+	left: 40px;
+	top: -20px;
+}
+.freedom__sky::after{
+	content: '';
+	position: absolute;
+	width: 85px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgb(28, 28, 240);
+	left: 20px;
+	top: 45px;
+}
+@keyframes sky{
+	0%{
+		transform: translateY(1px);
+	}
+	50%{
+		transform: translateY(7px);
+	}
+	100%{
+		transform: translateY(1px);
+	}
+}
+.freedom__rain{
+	position: absolute;
+	width: 110px;
+	height: 65px;
+	background: url('../img/03.png');
+	left: 270px;
+	top: 130px;
+	animation: sky 3s ease infinite;
+}
+.freedom__boy{
+	position: absolute;
+	width: 230px;
+	height: 280px;
+	background: url('../img/04.png');
+	left: 20px;
+	top: 70px;
+	animation: boy 2s ease infinite;
+}
+@keyframes boy{
+0%{
+	transform: translateY(20px);
+}
+50%{
+	transform: translateY(0px);
+}
+100%{
+	transform: translateY(40px);
+}
+}
+.freedom__girl{
+	position: absolute;
+	width: 283px;
+	height: 340px;
+	background: url('../img/05.png');
+	left: 380px;
+	top: 70px;
+	animation: girl 3s ease infinite;
+	perspective: 300px;
+}
+@keyframes girl{
+	0%{
+		transform: rotate3d(0,3,0.3,360deg);
 	}
 }
